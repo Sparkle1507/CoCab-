@@ -29,38 +29,40 @@ class _DestinationSearchScreenState extends State<DestinationSearchScreen> {
   LatLng? _selectedDropoff;
   String? _selectedDropoffName;
 
+  // ✨ INGA DHAAN DYNAMIC LIST IRUKKU ✨
+  // Backend-la irundhu vara data idhu dhaan. Un UI thedura exact keys (name, address, icon, color) idhula irukku
   final List<Map<String, dynamic>> recentPlaces = [
     {
-      "name": "Home",
-      "address": "24, Anna Nagar West, Chennai",
-      "icon": Icons.home_rounded,
-      "color": const Color(0xFFF59E0B),
-      "lat": 13.0850,
-      "lon": 80.2100
+      'name': 'Home',
+      'address': '24, Anna Nagar West, Chennai',
+      'icon': Icons.home_rounded,
+      'color': const Color(0xFFF59E0B), // Orange
+      'lat': 13.0850,
+      'lon': 80.2101,
     },
     {
-      "name": "Office",
-      "address": "Tidel Park, Taramani, Chennai",
-      "icon": Icons.work_rounded,
-      "color": const Color(0xFF78716C),
-      "lat": 12.9896,
-      "lon": 80.2475
+      'name': 'Office',
+      'address': 'Tidel Park, Taramani, Chennai',
+      'icon': Icons.work_rounded,
+      'color': const Color(0xFF6B7280), // Grey
+      'lat': 12.9892,
+      'lon': 80.2459,
     },
     {
-      "name": "Phoenix MarketCity",
-      "address": "Velachery Main Rd, Velachery",
-      "icon": Icons.shopping_bag_rounded,
-      "color": const Color(0xFF3B82F6),
-      "lat": 12.9915,
-      "lon": 80.2160
+      'name': 'Phoenix MarketCity',
+      'address': 'Velachery Main Rd, Velachery',
+      'icon': Icons.shopping_bag_rounded,
+      'color': const Color(0xFF3B82F6), // Blue
+      'lat': 12.9915,
+      'lon': 80.2168,
     },
     {
-      "name": "Chennai Airport",
-      "address": "Tirusulam, Chennai - 600016",
-      "icon": Icons.flight_rounded,
-      "color": const Color(0xFF6366F1),
-      "lat": 12.9716,
-      "lon": 80.1891
+      'name': 'Chennai Airport',
+      'address': 'Meenambakkam, Chennai',
+      'icon': Icons.flight_rounded,
+      'color': const Color(0xFF4F46E5), // Indigo
+      'lat': 12.9716,
+      'lon': 80.1898,
     },
   ];
 
