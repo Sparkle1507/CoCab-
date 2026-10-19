@@ -47,7 +47,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                   type: BottomNavigationBarType.fixed,
                   backgroundColor: Colors.transparent,
                   elevation: 0,
-                  selectedItemColor: kPremiumBlack,
+                  selectedItemColor: const Color(0xFF16A34A),
                   unselectedItemColor: kTextGrey,
                   selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w900, fontSize: 11),
                   unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 11),
@@ -67,12 +67,16 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     );
   }
 
-  Widget _navIcon(IconData icon, int index) {
+ Widget _navIcon(IconData icon, int index) {
     final selected = _currentIndex == index;
     return AnimatedContainer(
       duration: const Duration(milliseconds: 220), 
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8), 
-      decoration: BoxDecoration(color: selected ? kPremiumBlack : Colors.transparent, borderRadius: BorderRadius.circular(16)), 
+      // ✨ kPremiumBlack-a thookittu Green color pottachu ✨
+      decoration: BoxDecoration(
+        color: selected ? const Color.fromARGB(255, 22, 174, 108) : Colors.transparent, 
+        borderRadius: BorderRadius.circular(16)
+      ), 
       child: Icon(icon, color: selected ? Colors.white : kTextGrey, size: 21)
     );
   }
